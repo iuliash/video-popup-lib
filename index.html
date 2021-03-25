@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Popup Layout</title>
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/reset.css" />
+    <link rel="stylesheet" href="./modules/youtube-lib/youtube-lib.css" />
+    <script src="./modules/youtube-lib/youtube-lib.js" ></script>
+</head>
+<body>
+    <main class="container">
+        <h1 class="container__text">Digestion is <span>the key</span> to overall<br />wellness in Body, Mind and Spirit</h1>
+        <input id="video-button" type="button" class="container__video-button" aria-label="Open window with video"/>
+    </main>
+
+    <script>
+        let youtubeLib = new YoutubeLibrary("video-button", "https://www.youtube.com/embed/K8My60pMvT0");
+        youtubeLib.init();
+        // setTimeout(() => youtubeLib.destroy(), 10000)
+    </script>
+
+</body>
+</html>

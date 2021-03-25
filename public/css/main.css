@@ -1,0 +1,85 @@
+body {
+    background: url(../src/main-picture.png) center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}    
+
+.container {
+    color: white;
+    font-family: "TiemposFine-Bold";
+    font-size: 5vw;
+    line-height: 1.2em;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .container__text {
+    display: block;
+    position: relative;
+}
+.container span {
+    font-family: "Quentin";
+    font-size: 7vw;
+    margin: 0px 15px;
+}
+.container .container__text::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 10px;
+    background: yellow;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: -50px;
+}
+.container .container__video-button {
+    width: 40px;
+    height: 30px;
+    background-image: url(../src/youtube-icon.svg);
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 30px;
+    cursor: pointer;
+}
+.container .container__text + .container__video-button {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        font-size: 6.5vw;
+    }
+    .container .container__video-button {
+        width: 60px;
+        height: 45px;
+        background-size: 60px 45px;
+
+    }
+}
+
+@font-face {
+    font-family: "TiemposFine-Bold"; 
+    src: url("../fonts/TiemposFine-Bold.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Quentin"; 
+    src: url("../fonts/Quentin.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
